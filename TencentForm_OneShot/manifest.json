@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "腾讯文档通用报名助手",
+  "version": "1.0.0",
+  "description": "识别腾讯文档收集表的题目，预填答案后立即或定时填写。",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://docs.qq.com/form/page/*"
+      ],
+      "js": [
+        "shared.js",
+        "form.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

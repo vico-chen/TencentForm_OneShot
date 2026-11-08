@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>腾讯文档通用报名助手</title>
+<style>
+:root{color-scheme:light;--ink:#182d28;--sub:#526960;--border:#d6e4dc;--accent:#156b51;--paper:#f3f8f4}
+*{box-sizing:border-box}
+body{width:415px;margin:0;background:var(--paper);color:var(--ink);font:13px/1.5 system-ui,sans-serif}
+header,main,footer{padding:13px 15px}
+header{background:#e3efe7;border-bottom:1px solid var(--border)}
+h1{font-size:18px;margin:0 0 2px}p{margin:3px 0 7px}.muted{color:var(--sub)}
+#headrow{display:flex;align-items:center;justify-content:space-between;gap:12px}
+main{max-height:345px;overflow:auto;scrollbar-gutter:stable}
+fieldset{min-width:0;margin:0 0 9px;padding:7px 9px;border:1px solid var(--border);border-radius:7px;background:white}
+legend{padding:0 3px;max-width:100%;overflow-wrap:anywhere;font-weight:600}
+legend span{color:#a14322;font-weight:500}
+input:not([type=checkbox]):not([type=radio]),textarea,select{width:100%;padding:6px 7px;border:1px solid #b6cabf;border-radius:5px;background:white;color:var(--ink);font:inherit}
+textarea{resize:vertical;min-height:55px}label.choice{display:flex;align-items:baseline;gap:5px;overflow-wrap:anywhere}
+footer{border-top:1px solid var(--border);background:white}
+.buttons{display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin-top:8px}
+button{background:white;color:var(--ink);border:1px solid #a9c4b5;border-radius:5px;padding:6px 9px;font:inherit;cursor:pointer}
+button.clear-choice{margin-top:4px;padding:2px 6px}
+button.primary{background:var(--accent);border-color:var(--accent);color:white}
+button:disabled{opacity:.5;cursor:default}#status{min-height:20px;margin-bottom:0;color:var(--accent);overflow-wrap:anywhere}
+#schedule-wrap{display:grid;grid-template-columns:auto 1fr;gap:8px;align-items:center;margin:7px 0}
+:focus-visible{outline:2px solid #156b51;outline-offset:2px}
+</style>
+<header>
+  <div id="headrow"><h1>腾讯文档报名助手</h1><button id="refresh" type="button">重新识别</button></div>
+  <p id="form-title" class="muted">正在识别当前收集表…</p>
+</header>
+<main>
+  <p id="scan-note" class="muted"></p>
+  <div id="questions"></div>
+</main>
+<footer>
+  <label><input id="submit" type="checkbox"> 填完后自动提交并处理提交确认</label>
+  <label id="schedule-wrap">定时时间 <input id="time" type="datetime-local" step="1"></label>
+  <div class="buttons">
+    <button id="now" type="button" class="primary" disabled>立即填写</button>
+    <button id="schedule" type="button" disabled>启动定时</button>
+    <button id="cancel" type="button" disabled>取消任务</button>
+  </div>
+  <p id="status" role="status"></p>
+</footer>
+<script src="shared.js"></script>
+<script src="popup.js"></script>
+</html>
