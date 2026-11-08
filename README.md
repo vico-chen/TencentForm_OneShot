@@ -4,9 +4,9 @@
 
 ## 安装
 
-1. 下载并解压 GitHub 仓库源码，或将仓库克隆到本地。
+1. 下载并解压 dist 文件夹中的插件zip文件。
 2. 在 Edge 打开 `edge://extensions`，或在 Chrome 打开 `chrome://extensions`，开启「开发人员模式」。
-3. 点击「加载解压缩的扩展」，选择包含 [manifest.json](TencentForm_OneShot/manifest.json) 的 `TencentForm_OneShot` 目录。可直接加载源码。
+3. 点击「加载解压缩的扩展」，选择压缩包，即可完成插件的安装。
 4. 打开腾讯文档收集表。安装或重新加载扩展后，刷新已经打开的收集表页面。
 
 扩展识别的是 `https://docs.qq.com/form/page/…` 格式的收集表页面。
