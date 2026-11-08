@@ -4,7 +4,7 @@
 
 ## 安装
 
-1. 下载并解压 dist 文件夹中的插件zip文件。[点击该链接即可下载]("https://github.com/494f347d-30ad-449e-8cc3-1b9e3f153847")
+1. 下载并解压 [dist](https://github.com/vico-chen/TencentForm_OneShot/tree/main/dist) 文件夹中的插件zip文件。
 2. 在 Edge 打开 `edge://extensions`，或在 Chrome 打开 `chrome://extensions`，开启「开发人员模式」。
 3. 点击「加载解压缩的扩展」，选择压缩包，即可完成插件的安装。
 4. 打开腾讯文档收集表。安装或重新加载扩展后，刷新已经打开的收集表页面。
